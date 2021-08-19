@@ -1,5 +1,7 @@
-**nihal247.github.io**
+Hi there, my name is Nihal.
 
-My Corner of The Internet!
+This is My Corner of The Internet!
 
-Visit The Main Stuff → https://nihal247.github.io/
+Thanks for being here.
+
+Visit The Main Stuff At https://nihal247.github.io/
