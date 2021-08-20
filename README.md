@@ -4,4 +4,4 @@ This is My Corner of The Internet!
 
 Thanks for being here.
 
-Visit The Main Stuff At https://nihal247.github.io/
+Visit The Main Stuff At https://nihal247.github.io/ (Will force you to leave Firefox!).
