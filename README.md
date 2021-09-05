@@ -1,4 +1,4 @@
-Hi there👋! My name is Nihal.
+Hi there! 👋 My name is Nihal.
 
 This is My Corner of The Internet!
 
