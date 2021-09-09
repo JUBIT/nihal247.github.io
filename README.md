@@ -1,3 +1,7 @@
+# nihal247.github.io
+
+![nihal247.github.io stable](https://badgen.net/badge/nihal247.github.io/GPLv3/yellow)
+
 Hi there! 👋 My name is Nihal.
 
 This is My Corner of The Internet!
