@@ -1,6 +1,6 @@
 # nihal247.github.io
 
-![nihal247.github.io stable](https://badgen.net/badge/Learn%20C%20Sharp/GPLv3/green)
+![nihal247.github.io stable](https://badgen.net/badge/nihal247.github.io/GPLv3/yellow)
 
 Hi there! 👋 My name is Nihal.
 
