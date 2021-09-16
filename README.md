@@ -8,6 +8,13 @@ This is My Corner of The Internet!
 
 I update this website frequently.
 
-**Contributions Are Welcome!**
+# Contributions
 
-Visit The Main Stuff At https://nihal247.github.io/ (WARNING: One of the pages will force you to leave Firefox)
+Warmly Welcomed!
+
+# URL's
+
+Main Website: https://nihal247.github.io
+Firefox's Insecurity Article: https://nihal247.github.io/firefox's-insecurity
+Encrypted DNS Article: https://nihal247.github.io/encrypted-dns
+VPNs Article: https://nihal247.github.io/vpns
