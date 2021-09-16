@@ -15,6 +15,9 @@ Warmly Welcomed!
 # URL's
 
 Main Website: https://nihal247.github.io
+
 Firefox's Insecurity Article: https://nihal247.github.io/firefox's-insecurity
+
 Encrypted DNS Article: https://nihal247.github.io/encrypted-dns
+
 VPNs Article: https://nihal247.github.io/vpns
