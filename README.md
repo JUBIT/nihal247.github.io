@@ -6,7 +6,7 @@ Visit the page [here](https://nihal247.github.io/)
 
 # Contributions
 
-Warmly welcomed!
+Warmly welcome!
 
 # URLs
 
