@@ -10,7 +10,7 @@ Warmly welcome!
 
 # URLs
 
-Main Page: https://nihal247.github.io/
+Main Page: https://nihal247.github.io
 
 Safari White Paper: https://nihal247.github.io/Safari_White_Paper_Nov_2019.pdf
 
