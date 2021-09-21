@@ -1,17 +1,18 @@
-@media (prefers-color-scheme: dark)
+@media (prefers-color-scheme: dark) {
 
 body {
     background-color: peachpuff;
-}
+    }
 
 h1 {
     font-family: arial; font-size: 40;
-}
+    }
 
 p {
     font-family: arial; font-size: 20;
-}
+    }
 
 a {
     font-family: arial;
+    }
 }
