@@ -15,3 +15,8 @@ Main Page: https://nihal247.github.io
 Safari White Paper: https://nihal247.github.io/Safari_White_Paper_Nov_2019.pdf
 
 BAT White Paper: https://nihal247.github.io/BasicAttentionTokenWhitePaper-4.pdf
+
+# Thanks!
+
+Thank you for having a look here!
+
