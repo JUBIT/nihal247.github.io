@@ -21,4 +21,3 @@ Xayn White Paper: https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whi
 # Thanks!
 
 Thank you for having a look here!
-
