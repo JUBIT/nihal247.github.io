@@ -22,8 +22,8 @@ Xayn White Paper: https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whi
 
 This website is expected to work in almost all web browsers. Specifically, I test it in the following browsers, so they're officially supported:
 
-- Brave on Windows
-- Microsoft Edge on Windows
+- **Brave** on Windows
+- **Microsoft Edge** on Windows
 
 # Thanks!
 
