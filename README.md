@@ -18,7 +18,7 @@ BAT White Paper: https://nihal247.github.io/BasicAttentionTokenWhitePaper-4.pdf
 
 Xayn White Paper: https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whitepaper_3.0_v3.pdf
 
-# Browser Compatibility
+# Web Browser Compatibility
 
 This website is expected to work in almost all web browsers. Specifically, I test it in the following browsers, so they're officially supported:
 
