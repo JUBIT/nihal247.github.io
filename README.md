@@ -1,5 +1,6 @@
 # nihal247.github.io
 
+![nihalgithub stable](https://badgen.net/badge/nihal247.github.io/GPLv3/red?icon=github)
 Hi! 👋 My name is Nihal, and this is my corner of the web!
 
 
