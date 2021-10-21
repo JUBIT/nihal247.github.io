@@ -10,11 +10,11 @@ Warmly welcome!
 
 # URLs
 
-| #   | White Paper                                                                                         |
-| --- | --------------------------------------------------------------------------------------------------- |
-|  1  | [Safari White Paper](https://nihal247.github.io/Safari_White_Paper_Nov_2019.pdf)                    |
-|  2  | [BAT White Paper](https://nihal247.github.io/BasicAttentionTokenWhitePaper-4.pdf)                   |
-|  3  | [Xayn WhitePaper](https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whitepaper_3.0_v3.pdf) |
+| #   |                                            White Paper                                               |
+| --- | ---------------------------------------------------------------------------------------------------  |
+|  1  | [Safari White Paper](https://nihal247.github.io/Safari_White_Paper_Nov_2019.pdf)                     |
+|  2  | [BAT White Paper](https://nihal247.github.io/BasicAttentionTokenWhitePaper-4.pdf)                    |
+|  3  | [Xayn White Paper](https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whitepaper_3.0_v3.pdf) |
 
 # Web Browser Compatibility
 
