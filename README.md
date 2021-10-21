@@ -1,6 +1,7 @@
-# About
+# nihal247.github.io
 
 Hi! 👋 My name is Nihal, and this is my corner of the web!
+
 
 Visit my page [here](https://nihal247.github.io/)
 
