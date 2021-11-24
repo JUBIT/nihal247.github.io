@@ -26,7 +26,7 @@
     <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 50% height = 35%> <br>
-    <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudfare tells encryption and proxying has the following guarantees:</p>
+    <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
         <ol>
             <li>The target sees only the query and the proxy’s IP address.</li>
             <li>The proxy has no visibility into the DNS messages, with no ability to identify, read, or modify either the query being sent by the user or the answer being returned by the target.</li>
@@ -66,7 +66,7 @@
     <p>After understanding these two proxies, lets dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
         <img src = "images/iCloud Private Relay.png"
         width = 45% height = 30%>
-    <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requets to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving backforth.</p>
+    <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requests to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving back forth.</p>
     <br>
     <p>In order to make sure only one party doesn't have control over both the proxies, it may happen later in the future that one of these proxies is operated by Cloudflare or Fastly and the other one from Apple.
     <br>
