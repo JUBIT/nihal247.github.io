@@ -23,7 +23,7 @@
         </ul>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
-    <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
+    <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 50% height = 35%> <br>
     <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
