@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iCloud Private Relay | Nihal Raj</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      a:link{color: blue;}
+      a:visited{color: blue;}
+      a:hover{color: blue;}
+      a:active{color: blue;}
+    </style>
+  </head>
+  <body>
+    <h1>iCloud Private Relay</h1>
+    <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we requests DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
+        <ul>
+            <li>Routing DNS queries via an oblivious DNS</li>
+            <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
+            <li>Hides user's IP address to the websites</li>
+        </ul>
+    <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
+        <h2>1. Oblivious DNS</h2>
+    <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
+        <img src = "images/Cloudflare Oblivious DNS.png"
+        width = 50% height = 35%> <br>
+    <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudfare tells encryption and proxying has the following guarantees:</p>
+        <ol>
+            <li>The target sees only the query and the proxy’s IP address.</li>
+            <li>The proxy has no visibility into the DNS messages, with no ability to identify, read, or modify either the query being sent by the user or the answer being returned by the target.</li>
+            <li>Only the intended target can read the content of the query and produce a response.</li>
+        </ol>
+    <p>These three guarantees improve user privacy while maintaining the security and integrity of DNS queries. However, each of these guarantees relies on one fundamental property — that the proxy and the target servers do not collude. So long as there is no collusion, an attacker succeeds only if both the proxy and target are compromised. <br>
+    <br>
+    Long story short, this means Cloudflare (1.1.1.1) will not be able to get the user's IP address, having a great positive impact on user's privacy.
+    </p>
+    <h2>2. Upgrades HTTP requests to HTTPS</h2>
+        <img src = "images/HTTP To HTTPS.png"
+        width = 45% height = 30%>   
+    <p>This upgrade is obvious, with HTTP the ISP can know exactly what the user is doing. Making this upgrade shifts a non-encrypted traffic to an encrypted traffic.</p> 
+    <h2>3. Hiding IP address to websites</h2>
+    <p>In order to hide the user's IP address, Apple sets up two proxies:
+    </p>
+        <ol type = "a">
+            <li>Ingress Proxy</li>
+            <li>Egress Proxy</li>
+        </ol>
+    <h3>(a) Ingress Proxy</h3>
+    <p>
+        Ingress proxy does the following things:
+    </p>
+        <ul>
+            <li>Accepts connection from the internet</li>
+            <li>Protects IP address from other servers</li>
+            <li>Encrypts all internet traffic</li>
+        </ul>
+    <h3>(b) Egress Proxy</h3>
+    <p>Egress proxy does the following things:</p>
+        <ul>
+            <li>Accepts connection from the internet</li>
+            <li>Prevents Ingress proxy from seeing which websites are contacted</li>
+        </ul>
+    <p>After understanding these two proxies, lets dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
+        <img src = "images/iCloud Private Relay.png"
+        width = 45% height = 30%>
+    <p>The user connects to Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requets to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving backforth.</p>
+    <br>
+    <p>The whole iCloud Private Relay looks a good privacy step from Apple protecting user privacy to a great extent. From this the user can get assured:</p>
+    <br>
+        <ul>
+            <li>The DNS provider (Cloudflare) doesn't know him/her.</li>
+            <li>Insecure HTTP requests will be automatiically upgraded to HTTPS.</li>
+            <li>The Ingress proxy doesn't know which site the user is visiting.</li>
+            <li>The Egress proxy doesn't know the IP address of the user.</li>
+            <li>The website knows the IP adress of the Egress proxy, and not the user's real IP address.</li>
+        </ul>
+    <p>Currently iCloud Private Relay is in its Beta stage (in iOS 15, iPadOS 15, and macOS Monterey) and not available in all countries and regions. It requires an <a href = "https://support.apple.com/en-us/HT201238">iCloud+ subscription</a>.</p>
+    <h2>Sources</h2>
+        <ol>
+            <li><a href = "https://www.youtube.com/watch?v=4ds-ukcaYXg">iCloud Private Relay vs VPN vs Tor</a></li>
+            <li><a href = "https://support.apple.com/en-us/HT212614">About iCloud Private Relay</a></li>
+            <li><a href = "https://developer.apple.com/videos/play/wwdc2021/10085">Apple’s privacy pillars in focus</a></li>
+            <li><a href = "https://blog.cloudflare.com/oblivious-dns/">Improving DNS Privacy with Oblivious DoH in 1.1.1.1</a></li>
+        </ol>
+    <br>
+    <button onclick="window.location.href='https://github.com/Nihal247';">
+      My GitHub
+    </button> <br>
+    <br>
+    <a href = https://github.com/Nihal247/nihal247.github.io>License GPLv3</a>
+    </body>
+</html>
