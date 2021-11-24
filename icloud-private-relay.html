@@ -35,7 +35,7 @@
     <p>These three guarantees improve user privacy while maintaining the security and integrity of DNS queries. However, each of these guarantees relies on one fundamental property — that the proxy and the target servers do not collude. So long as there is no collusion, an attacker succeeds only if both the proxy and target are compromised. <br>
     <br>
     Long story short, this means Cloudflare (1.1.1.1) as well as the website will not receive the user's IP address, having a great positive impact on user's privacy. <br>
-	    <b>Note:</b> The proxy in here is the Egress proxy, which we'll discuss in the third section.
+	    <b>Note:</b> The proxy here is the Egress proxy, which we'll discuss in the third section.
     </p>
     <h2>2. Upgrades HTTP requests to HTTPS</h2>
         <img src = "images/HTTP To HTTPS.png"
@@ -50,7 +50,7 @@
         </ol>
     <h3>(a) Ingress Proxy</h3>
     <p>
-        Ingress proxy does the following things:
+        The Ingress proxy does the following things:
     </p>
         <ul>
             <li>Accepts connection from the internet</li>
@@ -58,7 +58,7 @@
             <li>Encrypts all internet traffic</li>
         </ul>
     <h3>(b) Egress Proxy</h3>
-    <p>Egress proxy does the following things:</p>
+    <p>The Egress proxy does the following things:</p>
         <ul>
             <li>Accepts connection from the internet</li>
             <li>Prevents Ingress proxy from seeing which websites are contacted</li>
@@ -66,7 +66,7 @@
     <p>After understanding these two proxies, lets dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
         <img src = "images/iCloud Private Relay.png"
         width = 45% height = 30%>
-    <p>The user connects to Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requets to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving backforth.</p>
+    <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requets to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving backforth.</p>
     <br>
     <p>The whole iCloud Private Relay looks a good privacy step from Apple protecting user privacy to a great extent. From this the user can get assured:</p>
     <br>
