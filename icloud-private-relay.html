@@ -17,9 +17,9 @@
     <h1>iCloud Private Relay</h1>
     <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we requests DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
         <ul>
-            <li>Routing DNS queries via an oblivious DNS</li>
+	    <li>Routing <a href = "https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> queries via an oblivious DNS</li>
             <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
-            <li>Hides user's IP address to the websites</li>
+	    <li>Hides user's <a href = "https://en.wikipedia.org/wiki/IP_address">IP address</a> to the websites</li>
         </ul>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
