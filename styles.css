@@ -1,9 +1,17 @@
 body {
-    background-color: peachpuff;
+    background-color: peachpuff; text-align: center;
 }
 
 h1 {
     font-family: arial; font-size: 40;
+}
+
+h2 {
+    font-family: arial;
+}
+
+h3 {
+    font-family: arial;
 }
 
 p {
@@ -11,5 +19,13 @@ p {
 }
 
 a {
+    font-family: arial;
+}
+
+ul {
+    font-family: arial;
+}
+
+ol {
     font-family: arial;
 }
