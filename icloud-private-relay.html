@@ -23,7 +23,7 @@
         </ul>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
-    <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
+    <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 50% height = 35%> <br>
     <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudfare tells encryption and proxying has the following guarantees:</p>
@@ -67,6 +67,8 @@
         <img src = "images/iCloud Private Relay.png"
         width = 45% height = 30%>
     <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requets to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving backforth.</p>
+    <br>
+    <p>In order to make sure only one party doesn't have control over both the proxies, it may happen later in the future that one of these proxies is operated by Cloudflare or Fastly and the other one from Apple.
     <br>
     <p>The whole iCloud Private Relay looks a good privacy step from Apple protecting user privacy to a great extent. From this the user can get assured:</p>
     <br>
