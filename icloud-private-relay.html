@@ -20,7 +20,7 @@
     <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 45% height = 30%> <br>
-    <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS and <a href = "https://en.wikipedia.org/wiki/DNS_over_HTTPS">DoH</a>, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
+    <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS and <a href = "https://en.wikipedia.org/wiki/DNS_over_HTTPS">DoH</a>, and holds the encryption key (to encrypt queries to the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
         <ol>
             <li>The target sees only the query and the proxy’s IP address.</li>
             <li>The proxy has no visibility into the DNS messages, with no ability to identify, read, or modify either the query being sent by the user or the answer being returned by the target.</li>
