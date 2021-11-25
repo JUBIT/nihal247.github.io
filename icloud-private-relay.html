@@ -10,11 +10,11 @@
   <body>
     <h1>iCloud Private Relay</h1>
     <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we request DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
-        <ul>
+        <ol type = "i">
 	    <li>Routing <a href = "https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> queries via an oblivious DNS</li>
             <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
 	    <li>Hides user's <a href = "https://en.wikipedia.org/wiki/IP_address">IP address</a> to the websites</li>
-        </ul>
+        </ol>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
     <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p> <br>
@@ -46,17 +46,17 @@
     <p>
         The Ingress proxy does the following things:
     </p>
-        <ul>
+        <ol type = "i">
             <li>Accepts connection from the internet</li>
             <li>Protects IP address from other servers</li>
             <li>Encrypts all internet traffic</li>
-        </ul>
+        </ol>
     <h3>(b) Egress Proxy</h3>
     <p>The Egress proxy does the following things:</p>
-        <ul>
+        <ol type = "i">
             <li>Accepts connection from the internet</li>
             <li>Prevents Ingress proxy from seeing which websites are contacted</li>
-        </ul>
+        </ol>
     <p>After understanding these two proxies, let's dive into understanding how these works in order to protect user privacy with the below diagram 👇</p> <br>
         <img src = "images/iCloud Private Relay.png"
         width = 45% height = 30%> <br>
@@ -66,13 +66,13 @@
     <br>
     <p>The whole iCloud Private Relay looks a good privacy step from Apple protecting user privacy to a great extent. From this the user can get assured:</p>
     <br>
-        <ul>
-            <li>The DNS provider (Cloudflare) doesn't know him/her.</li>
+        <ol type = "i">
+            <li>The DNS provider doesn't know him/her.</li>
             <li>Insecure HTTP requests will be automatically upgraded to HTTPS.</li>
             <li>The Ingress proxy doesn't know which site the user is visiting.</li>
             <li>The Egress proxy doesn't know the IP address of the user.</li>
             <li>The website knows the IP address of the Egress proxy, and not the user's real IP address.</li>
-        </ul>
+        </ol>
     <p>Currently iCloud Private Relay is in its Beta stage (in iOS 15, iPadOS 15, and macOS Monterey) and not available in all countries and regions. It requires an <a href = "https://support.apple.com/en-us/HT201238">iCloud+ subscription</a>.</p> <br>
     <h2>Sources</h2>
         <ol>
