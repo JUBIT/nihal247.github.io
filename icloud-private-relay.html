@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>iCloud Private Relay</h1>
-    <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we requests DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
+    <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we request DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
         <ul>
 	    <li>Routing <a href = "https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> queries via an oblivious DNS</li>
             <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
@@ -17,7 +17,7 @@
         </ul>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
-    <p>Apple has partnershiped with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
+    <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 45% height = 30%> <br>
     <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS, and holds the encryption key (to encrypt queries for the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
@@ -68,7 +68,7 @@
     <br>
         <ul>
             <li>The DNS provider (Cloudflare) doesn't know him/her.</li>
-            <li>Insecure HTTP requests will be automatiically upgraded to HTTPS.</li>
+            <li>Insecure HTTP requests will be automatically upgraded to HTTPS.</li>
             <li>The Ingress proxy doesn't know which site the user is visiting.</li>
             <li>The Egress proxy doesn't know the IP address of the user.</li>
             <li>The website knows the IP address of the Egress proxy, and not the user's real IP address.</li>
