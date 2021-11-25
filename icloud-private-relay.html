@@ -15,7 +15,7 @@
             <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
 	    <li>Hides user's <a href = "https://en.wikipedia.org/wiki/IP_address">IP address</a> to the websites</li>
         </ol>
-    <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
+    <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p> <br>
         <h2>1. Oblivious DNS</h2>
     <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p> <br>
         <img src = "images/Cloudflare Oblivious DNS.png"
@@ -29,12 +29,11 @@
     <p>These three guarantees improve user privacy while maintaining the security and integrity of DNS queries. However, each of these guarantees relies on one fundamental property — that the proxy and the target servers do not collude. So long as there is no collusion, an attacker succeeds only if both the proxy and target are compromised. <br>
     <br>
     Long story short, this means Cloudflare (1.1.1.1) as well as the website will not receive the user's IP address, having a great positive impact on user's privacy. <br>
-	    <b>Note:</b> The proxy here is the Egress proxy, which we'll discuss in the third section.
-    </p>
+	    <b>Note:</b> The proxy here is the Egress proxy, which we'll discuss in the third section.</p> <br>
     <h2>2. Upgrades HTTP requests to HTTPS</h2> <br>
         <img src = "images/HTTP To HTTPS.png"
         width = 45% height = 30%> <br>  
-    <p>This upgrade is obvious, with HTTP the ISP can know exactly what the user is doing. Making this upgrade shifts a non-encrypted traffic to an encrypted traffic.</p> 
+    <p>This upgrade is obvious, with HTTP the ISP can know exactly what the user is doing. Making this upgrade shifts a non-encrypted traffic to an encrypted traffic.</p> <br> 
     <h2>3. Hiding IP address to websites</h2>
     <p>In order to hide the user's IP address, Apple sets up two proxies:
     </p>
