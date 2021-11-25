@@ -63,7 +63,7 @@
             <li>Accepts connection from the internet</li>
             <li>Prevents Ingress proxy from seeing which websites are contacted</li>
         </ul>
-    <p>After understanding these two proxies, lets dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
+    <p>After understanding these two proxies, let's dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
         <img src = "images/iCloud Private Relay.png"
         width = 45% height = 30%>
     <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requests to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving back forth.</p>
