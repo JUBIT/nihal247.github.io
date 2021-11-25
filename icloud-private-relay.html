@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <h1>iCloud Private Relay</h1>
+    <h1>iCloud Private Relay</h1> <br>
     <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we request DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
         <ul>
 	    <li>Routing <a href = "https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> queries via an oblivious DNS</li>
@@ -17,7 +17,7 @@
         </ul>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p>
         <h2>1. Oblivious DNS</h2>
-    <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p>
+    <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p> <br>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 45% height = 30%> <br>
     <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS and <a href = "https://en.wikipedia.org/wiki/DNS_over_HTTPS">DoH</a>, and holds the encryption key (to encrypt queries to the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
@@ -31,9 +31,9 @@
     Long story short, this means Cloudflare (1.1.1.1) as well as the website will not receive the user's IP address, having a great positive impact on user's privacy. <br>
 	    <b>Note:</b> The proxy here is the Egress proxy, which we'll discuss in the third section.
     </p>
-    <h2>2. Upgrades HTTP requests to HTTPS</h2>
+    <h2>2. Upgrades HTTP requests to HTTPS</h2> <br>
         <img src = "images/HTTP To HTTPS.png"
-        width = 45% height = 30%>   
+        width = 45% height = 30%> <br>  
     <p>This upgrade is obvious, with HTTP the ISP can know exactly what the user is doing. Making this upgrade shifts a non-encrypted traffic to an encrypted traffic.</p> 
     <h2>3. Hiding IP address to websites</h2>
     <p>In order to hide the user's IP address, Apple sets up two proxies:
@@ -57,9 +57,9 @@
             <li>Accepts connection from the internet</li>
             <li>Prevents Ingress proxy from seeing which websites are contacted</li>
         </ul>
-    <p>After understanding these two proxies, let's dive into understanding how these works in order to protect user privacy with the below diagram 👇</p>
+    <p>After understanding these two proxies, let's dive into understanding how these works in order to protect user privacy with the below diagram 👇</p> <br>
         <img src = "images/iCloud Private Relay.png"
-        width = 45% height = 30%>
+        width = 45% height = 30%> <br>
     <p>The user connects to the Ingress proxy, which gets our IP address to know the area in which the user lives, via HTTPS. Then, the user requests to the Egress proxy via HTTPS, which knows the area where the user lives, and not the IP address with the requested website, and prevents the Ingress proxy from getting information about the requested website. With knowing the area in which the user lives, the Egress proxy assigns a random IP address from the area to the traffic, not using user's real IP address, and requests to the website, taking the information, moving back forth.</p>
     <br>
     <p>In order to make sure only one party doesn't have control over both the proxies, it may happen later in the future that the ingress proxy is operated by Apple and the egress proxy from Cloudflare or Fastly.
