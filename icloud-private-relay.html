@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>iCloud Private Relay</h1>
-    <p><a href = "https://www.apple.com/">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we request DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
+    <p><a href = "https://www.apple.com">Apple</a> has made a privacy preserving web traffic relay for its Safari users. When we browse the web, we request DNS queries and our IP address gets sent to the DNS provider as well as the websites we visit. Apple has come up with a solution, which it states is "designed to protect your privacy by ensuring that when you browse the web in Safari". This article aims to explain how this works. iCloud Private Relay has three jobs to play:</p>
         <ol type = "i">
 	    <li>Routing <a href = "https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> queries via an oblivious DNS</li>
             <li>Upgrades <a href = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> requests to <a href = "https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> requests</li>
@@ -17,7 +17,7 @@
         </ol>
     <p>Apple claims "no single party—not even Apple—can see both who you are and what sites you're visiting." This means not even the Internet Service Provider (ISP) can snoop on the user. In this article, we'll discuss how this works.</p> <br>
         <h2>1. Oblivious DNS over HTTPS (ODoH)</h2>
-    <p>Apple has partnered with <a href = "https://www.cloudflare.com/">Cloudflare</a> and <a href = "https://www.fastly.com/">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns/">oblivious DNS</a>, which we'll understand from the below diagram 👇</p> <br>
+    <p>Apple has partnered with <a href = "https://www.cloudflare.com">Cloudflare</a> and <a href = "https://www.fastly.com">Fastly</a> to set up an <a href = "https://blog.cloudflare.com/oblivious-dns">oblivious DNS</a>, which we'll understand from the below diagram 👇</p> <br>
         <img src = "images/Cloudflare Oblivious DNS.png"
         width = 45% height = 30%> <br>
     <p>The user establishes an HTTPS connection with a proxy, which forwards the message from the user to the target. The user acts as the same in the case of DNS and <a href = "https://en.wikipedia.org/wiki/DNS_over_HTTPS">DoH</a>, and holds the encryption key (to encrypt queries to the target) as well as the decryption key (to decrypt the DNS's response). Cloudflare tells encryption and proxying has the following guarantees:</p>
@@ -78,8 +78,8 @@
             <li><a href = "https://www.youtube.com/watch?v=4ds-ukcaYXg">iCloud Private Relay vs VPN vs Tor</a> - Sun Knudsen | YouTube</li>
             <li><a href = "https://support.apple.com/en-us/HT212614">About iCloud Private Relay</a> - Apple Support</li>
             <li><a href = "https://developer.apple.com/videos/play/wwdc2021/10085">Apple’s privacy pillars in focus</a> - Apple Developer</li>
-            <li><a href = "https://blog.cloudflare.com/oblivious-dns/">Improving DNS Privacy with Oblivious DoH in 1.1.1.1</a> - The Cloudflare Blog</li>
-	    <li><a href = "https://www.fool.com/investing/2021/09/01/why-fastly-and-cloudflare-stocks-jumped-and-akamai/">Why Fastly and Cloudflare Shares Jumped Today (and Akamai Ticked Higher)</a> - The Motley Fool</li>
+            <li><a href = "https://blog.cloudflare.com/oblivious-dns">Improving DNS Privacy with Oblivious DoH in 1.1.1.1</a> - The Cloudflare Blog</li>
+	    <li><a href = "https://www.fool.com/investing/2021/09/01/why-fastly-and-cloudflare-stocks-jumped-and-akamai">Why Fastly and Cloudflare Shares Jumped Today (and Akamai Ticked Higher)</a> - The Motley Fool</li>
         </ol>
     <br>
     <button onclick="window.location.href='https://github.com/Nihal247';">
