@@ -22,8 +22,8 @@ Warmly welcome!
 
 This website is expected to work in almost all web browsers. Specifically, I test it in the following web browsers, so they're officially supported:
 
-- **Brave** on Windows
 - **Microsoft Edge** on Windows
+- **Vivaldi** on Windows
 
 # Thanks!
 
