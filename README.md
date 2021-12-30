@@ -2,10 +2,9 @@
 
 ![nihal247.github.io Stable](https://badgen.net/badge/nihal247.github.io/GPLv3/red?icon=github)
 
-Hi! 👋 My name is Nihal, and this is my corner of the web!
+Hi! 👋 My name is Nihal, and this is my corner of the web! I write a few articles in my spare time, which this website holds.
 
-
-Visit my page [here](https://nihal247.github.io/)
+Visit the page [here](https://nihal247.github.io/)
 
 # Contributions
 
@@ -13,11 +12,11 @@ Warmly welcome!
 
 # URLs
 
-| #   |                                            White Paper                                               |
-| --- | ---------------------------------------------------------------------------------------------------  |
-|  1  | [Safari White Paper](https://nihal247.github.io/Safari_White_Paper_Nov_2019.pdf)                     |
-|  2  | [BAT White Paper](https://nihal247.github.io/BasicAttentionTokenWhitePaper-4.pdf)                    |
-|  3  | [Xayn White Paper](https://nihal247.github.io/5fcf7f97c0333cb84277fcd8_XayNet_Whitepaper_3.0_v3.pdf) |
+| #   |                                            White Paper                                                                |
+| --- | ----------------------------------------------------------------------------------------------------------------------|
+|  1  | [Brave's Affiliate Scandal](https://nihal247.github.io/brave-affiliate-scandal)                                       |
+|  2  | [iCloud Private Relay](https://nihal247.github.io/icloud-private-relay)                                               |
+|  3  | [International Day of Person With Disability](https://nihal247.github.io/international-day-of-person-with-disability) |
 
 # Web Browser Compatibility
 
