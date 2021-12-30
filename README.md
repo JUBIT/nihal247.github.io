@@ -12,7 +12,7 @@ Warmly welcome!
 
 # URLs
 
-| #   |                                            White Paper                                                                |
+| #   |                                                      Articles                                                         |
 | --- | ----------------------------------------------------------------------------------------------------------------------|
 |  1  | [Brave's Affiliate Scandal](https://nihal247.github.io/brave-affiliate-scandal)                                       |
 |  2  | [iCloud Private Relay](https://nihal247.github.io/icloud-private-relay)                                               |
